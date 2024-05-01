@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 13</title>
+    <style>
+        img{
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><img src="vignittes/image1.jpg" onclick="agrandir('vignittes/image1.jpg')" alt=""></td>
+            <td><img src="vignittes/image2.jpeg" onclick="agrandir('vignittes/image2.jpeg')" alt=""></td>
+            <td><img src="vignittes/image3.jpeg" onclick="agrandir('vignittes/image3.jpeg')" alt="" srcset=""></td>
+        </tr>
+        <tr>
+            <td><img src="vignittes/image4.jpeg" onclick="agrandir('vignittes/image4.jpeg')" alt=""></td>
+            <td><img src="vignittes/image5.jpeg" onclick="agrandir('vignittes/image5.jpeg')" alt=""></td>
+            <td><img src="vignittes/image6.jpeg" onclick="agrandir('vignittes/image6.jpeg')" alt=""></td>
+        </tr>
+    </table>
+    <script>
+        function agrandir(src){
+            window.open(src , "_blank" , "width=350px , height = 350px")
+        }
+    </script>
+    
+</body>
+</html>

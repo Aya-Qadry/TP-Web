@@ -1,0 +1,28 @@
+#entete {
+    margin: 0;
+    height: 90px;
+    border: 1px solid red;
+    /*margin:0 0 0 1em;  Marge gauche de 1em */
+}
+
+#contenu {
+    margin: 0;
+    margin-left: 200px;
+    height: 550px;
+    border: 1px solid blue;
+}
+
+#menu {
+    float: left;
+    margin: 0;
+    width: 200px;
+    height: 550px;
+    border: 1px solid green;
+}
+
+#copyright {
+    clear: both;
+    margin: 0;
+    height: 90px;
+    border: 1px solid purple;
+}

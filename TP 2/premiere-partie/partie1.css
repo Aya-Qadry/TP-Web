@@ -1,0 +1,17 @@
+*{
+    background-color:white;
+}
+#contenu{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+}
+ol>li {
+    color: blue;
+}
+ol>ul>li{
+    color:green ; 
+}
+.important{
+    color:red; 
+
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            background-color: antiquewhite;
+            border: 1px solid black;
+        }
+        input{
+            width: 40px;
+        }
+        button{
+            background-color: rgb(223, 219, 212);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td>3*2</td>
+                <td><input type="text" id="first"></td>
+            </tr>
+            <tr>
+                <td>6*6</td>
+                <td><input type="text" id="second"></td>
+            </tr>
+            <tr>
+                <td>4*4</td>
+                <td><input type="text" id="third"></td>
+            </tr>
+            <tr>
+                <td>3*5</td>
+                <td><input type="text" name="" id="fourth"></td>
+            </tr>
+            <tr>
+                <td><button type="submit" onclick="submit()">Verifier resultats</button></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function submit(){
+            var first = parseInt(document.getElementById('first').value) ; 
+            var second = parseInt(document.getElementById('second').value) ; 
+            var third = parseInt(document.getElementById('third').value) ; 
+            var fourth = parseInt(document.getElementById('fourth').value) ; 
+            var reponse = 0 ;
+            if(first == 6){reponse+=1;}
+            if(second == 36){reponse+=1;}
+            if(third == 16){reponse+=1;}
+            if(fourth == 15){reponse+=1;}
+            var message = "Vous avez "+reponse+" bonnes reponses , correction ?" ;
+            if(reponse == 4){
+                message = "Toutes les reponses sont correctes" ;
+            }
+            var back = confirm(message , "OK" , "Annuler") ; 
+            var first_i = document.getElementById('first'); 
+            var second_i = document.getElementById('second'); 
+            var third_i = document.getElementById('third'); 
+            var fourth_i = document.getElementById('fourth'); 
+
+            if(back==true && reponse!=4){
+                first_i.value = 6 ; 
+                second_i.value = 36 ; 
+                third_i.value = 16 ; 
+                fourth_i.value = 15 ; 
+            }
+
+
+        }
+    </script>
+</body>
+</html>

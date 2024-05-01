@@ -1,0 +1,72 @@
+#header , h1{
+    margin: 0;
+    height: 100px;
+    text-align: center;
+    color: rgb(211, 87, 87);
+    padding-top: 20px;
+}
+#menu{
+    float: left;
+    width: 148px;
+    border: 1px solid brown;
+    margin-left: 0;
+    height: 400px;
+    margin-top: 20px;
+}
+#menu li{
+    list-style: none;
+    font-size: larger;
+    color: brown;
+    padding-top: 20px;
+}
+#menu #titre{
+    text-align: center;
+    color: rgb(153, 29, 29); 
+    height: 40px;
+    font-size: larger;
+}
+li a:link , li a:visited {
+    color: rgb(224, 114, 114); 
+    text-decoration: none;
+}
+li a:hover{
+    color: blue;
+} 
+li a{
+font-weight: bold;
+}
+#content , #content_hist{
+    margin-left: 150px;
+    padding-left: 100px;
+}
+#text{
+    padding-top: 35px;
+    width: 100%;
+}
+body{
+    background-color: antiquewhite;
+}
+#err{
+    width: fit-content;
+    height: fit-content; 
+    padding-right: 60px;
+}
+p , li {
+    font-size: 14pt;
+}
+#content_hist{
+    background-image: url(histoire.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: fit-content;
+    height: fit-content; 
+    margin-right: 60px;
+    padding-right: 20px;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-left: 200px;
+    font-weight: bold;
+}
+ 

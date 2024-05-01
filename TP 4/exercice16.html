@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 16</title>
+</head>
+
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td>Champ Texte 1 : </td>
+                <td><input type="text" id="nom"></td>
+            </tr>
+            <tr>
+                <td>Champ Texte Copié : </td>
+                <td><input type="text" id="copie" readonly></td>
+            </tr>
+            <tr>
+                <td><button type="submit" onclick="copie()">Copier</button></td>
+            </tr> 
+        </table>
+    </form>
+    <script>
+        function copie(){
+            var nom = document.getElementById('nom').value ; 
+            var copie = document.getElementById('copie') ; 
+            copie.textContent = nom ; 
+            copie.value = nom ; 
+        }
+    </script>
+
+
+
+    <h3>Deuxieme partie</h3>
+    <!-- deuxieme partie -->
+    <form>
+        <label for="champ1">Champ Texte 1 :</label>
+        <input type="text" id="champ1"><br><br>
+    </form>
+
+    <form >
+        <label for="champ2">Champ Texte 2 :</label>
+        <input type="text" id="champ2" readonly><br><br>
+    </form>
+
+    <button onclick="copierChampTexte()">Copier Champ Texte</button>
+
+    <script>
+        function copierChampTexte() {
+            var champ1 = document.getElementById('champ1');
+            var champ2 = document.getElementById('champ2');
+
+            champ2.value = champ1.value;
+        }
+    </script>
+
+    <!-- Troisieme partie -->
+    <h3>Troisieme partie</h3>
+    <label for="paysListe">Choisir un pays :</label>
+    <select id="paysListe" onchange="afficherCapitale()">
+        <option value="france">France</option>
+        <option value="usa">États-Unis</option>
+        <option value="uk">Royaume-Uni</option>
+        <option value="germany">Allemagne</option>
+    </select>
+
+    <br><br>
+
+    <label for="capitale">Capitale :</label>
+    <input type="text" id="capitale" readonly>
+
+    <script>
+        var capitales = {
+            "france": "Paris",
+            "usa": "Washington",
+            "uk": "Londres",
+            "germany": "Berlin"
+        };
+
+        function afficherCapitale() {
+            var paysSelectionne = document.getElementById('paysListe').value;  
+            if (capitales.hasOwnProperty(paysSelectionne)) {
+                document.getElementById('capitale').value = capitales[paysSelectionne];
+            } else {
+                document.getElementById('capitale').value = "";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 14</title>
+</head>
+<body>
+    
+    <div id="tab" style="width: 300px; height: 300px; border: 1px solid black;">
+        <img src="vignittes/image1.jpg" alt="" id="image" style="width: 250px; height: 250px; ">
+    </div><br>
+    <button onclick="next()">Next</button> 
+    <button onclick="previous()">Previous</button>
+    <script>
+        var tableau = new Array() ; 
+        tableau = ["vignittes/image1.jpg" , "vignittes/image2.jpeg" , "vignittes/image3.jpeg" ,
+                   "vignittes/image4.jpeg" , "vignittes/image5.jpeg" , "vignittes/image6.jpeg"];
+        var img = document.getElementById("image") ; 
+        var number = 0 ;
+        function next(){ 
+            if(number<5 ){
+                img.setAttribute("src",tableau[number+=1]);
+            }
+        }
+        function previous(){
+            if(number>0){
+                img.setAttribute("src",tableau[number-=1]);
+            }
+        }
+    </script>
+</body>
+</html>

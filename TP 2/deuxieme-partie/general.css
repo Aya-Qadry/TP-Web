@@ -1,0 +1,26 @@
+#sec{
+    list-style: none;
+    font-size: 23px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#sections{
+    align-items: baseline;
+}
+#sec a:link , #sommaire_lien {
+    color: brown;
+}
+#sec a:visited , #sommaire_lien{
+    color: rgb(155, 94, 104);
+} 
+#sommaire_lien{
+
+    color: red;
+    font-size: 22px;
+    padding: 10px;
+}
+#som_table{
+
+    margin-left: 230px;
+}
+ 

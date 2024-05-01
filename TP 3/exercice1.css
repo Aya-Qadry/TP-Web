@@ -1,0 +1,63 @@
+html{
+    background-color: antiquewhite;
+    /* background-image: url(fond_ecran.jpg); */
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+ 
+body{
+    margin-top: 30px;
+    margin-right: 25px;
+    margin-left: 35px;
+    
+}
+h1 , h2{
+    color: brown;
+}
+h1{
+    text-align: center;
+    color: burlywood;
+}
+h2{
+    margin-left: -15px;
+}
+/* starting from the second child*/
+td:nth-child(n+2){
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+}
+p{
+    text-align: justify;
+}
+.special{
+    color: red;
+}
+table td{
+    background-color: rgb(254, 249, 241);
+}
+table{
+    /* margin-left: 300px; */
+}
+.texte{
+    margin-left: 10cm;
+}
+a:link{
+    color : red ; 
+}
+a:visited{
+    color : orange ; 
+}
+a:active{
+    color: green;
+}
+a:hover{
+    color: blue;
+}
+#fond{
+    height: 20%;
+    width: 500px;
+}
+#cafe_img{
+    height: 90px;
+    width: 90px;
+}

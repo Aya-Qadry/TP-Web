@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 4</title>
+</head>
+<body>
+    <label for="num">Entrez un chiffre entre 0 et 10</label>
+    <input type="text" id="num" ><br>
+    <button type="submit" onclick="submit()">Entrer</button>
+    <script>
+        function submit(){
+            var num_val = document.getElementById('num').value ; 
+            var num = 5 ; 
+            if(num == num_val){
+                alert('Vous avez trouve le bon chiffre !');
+            }else{
+                alert('Vous navez pas trouve le bon chiffre ' );
+            }
+        }
+    </script>
+    <br><br>
+    <label for="nombre">Entrez un nombre</label>
+    <input type="text" id="nombre"><br>
+    <button type="submit" onclick="submit2()">Entrer </button>
+    <p id="content"></p>
+    <script>
+        function submit2(){
+            var nombre = document.getElementById('nombre').value ; 
+            var parag = document.getElementById('content');
+            parag.textContent = 'Les diviseur de '+nombre+' sont : ';
+            for(let i=1 ; i <= nombre ; i++){
+                if((nombre%i)==0){
+                    parag.textContent = parag.textContent + i +'   ';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

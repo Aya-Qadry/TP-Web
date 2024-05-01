@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 6 </title>
+</head>
+<body>
+    <label for="nb"></label>
+    <input type="text" id="nb"   value="10" >
+    <button type="submit" onclick="somme_N_entiers()">Calculer les premiers N entiers</button><br><br><br>
+    <textarea id="resultat"   cols="40" rows="20" readonly></textarea>
+    <script>
+        function somme_N_entiers(){
+            var area = document.getElementById('resultat') ; 
+            area.value = '' ; 
+            var nombre = document.getElementById('nb').value ; 
+            var somme = 0;
+            for (var i = 1; i <= nombre; i++) {
+                somme += i;
+                area.value += "Somme des " + i + " premiers entiers : " + somme + "\n";
+            }
+        }
+
+    </script>
+</body>
+</html>

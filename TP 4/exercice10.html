@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 10</title>
+</head>
+<body>
+    <h1 id="hypertext" onmouseover="mouseOver()" onmouseleave="mouseLeave()"><a href="">Put the mouse over this hypertext !!</a></h1><br>
+    <p id="lien"></p>
+    <script>
+        function mouseOver(){
+            var lien = document.getElementById("lien") ; 
+            lien.textContent="Cliquer sur le lien !" ; 
+        }
+        function mouseLeave(){
+            var lien = document.getElementById('lien') ; 
+            lien.textContent = ' ' ; 
+        }
+    </script>
+</body>
+</html>

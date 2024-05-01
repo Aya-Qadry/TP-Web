@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body onload="bienvenue()">
+    <ul > 
+        <li>
+            <button type="submit" onclick="alert('Hello World ! ')">Button</button><br>
+        </li>
+        <li>
+            <script>
+                document.write("Hello World !");
+            </script>
+        </li>
+        <li>
+                <input type="text" placeholder="Ecrire votre nom" id="username">
+                <button type="submit" onclick="affiche()">Afficher en gras </button>
+                <p id="nom_gras"></p>
+                <script>
+                    function affiche(){
+                        var name = document.getElementById('username').value ; 
+                        var parag = document.getElementById('nom_gras') ; 
+                        parag.style.fontWeight= 'bold' ; 
+                        parag.textContent = name ;
+                    } 
+                </script>
+        </li>
+        <li>
+            <h2 id="bien_msg"></h2>
+        </li>
+    </ul>
+    
+    <script>
+        function bienvenue(){
+            var area = document.getElementById('bien_msg')
+            var msg = 'Bienvenue'
+            area.textContent=msg ;
+            area.style.color='blue'; 
+            area.style.textAlign='center' ; 
+
+        }
+    </script>
+    
+
+</body>
+</html>

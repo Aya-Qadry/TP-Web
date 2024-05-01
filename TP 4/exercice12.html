@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 12</title>
+</head>
+<body>
+    <form id="form">
+        <table>
+            <tr>
+                <td>Mon texte</td>
+                <td><input type="text" id="texte"></td>
+            </tr>
+            <tr>
+                <td>Mon password</td>
+                <td><input type="password" id="password"></td> 
+            </tr>
+            <tr>
+                <td>Case à cocher</td>
+                <td><input type="checkbox" id="check"></td>
+            </tr>
+            <tr>
+                <td>Choisir un bouton</td>
+                <td>
+                    <input type="radio" name="button" value="bouton1"> Bouton 1 
+                    <input type="radio" name="button" value="bouton2"> Bouton 2
+                    <input type="radio" name="button" value="bouton3"> Bouton 3
+                    <input type="radio" name="button" value="bouton4"> Bouton 4
+                    <input type="radio" name="button" value="bouton5"> Bouton 5
+                </td>
+            </tr>
+            <tr>
+                <td>Choisir une valeur</td>
+                <td>
+                    <select id="select">
+                        <option value="premier">Premier</option>
+                        <option value="deuxieme">Deuxieme</option>
+                        <option value="troisieme">Troisieme</option>
+                        <option value="quatrieme">Quatrieme</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Un commentaire</td>
+                <td>
+                    <textarea id="commentaire" cols="30" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="submit()">Afficher alerte des informations</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function submit() {
+            var texte = document.getElementById('texte').value;
+            var password = document.getElementById('password').value;
+            var checked = document.getElementById('check').checked ? "Case cochée !" : "Case n'est pas cochée !";  
+            var radio = document.querySelector('input[name="button"]:checked'); // Get the selected radio button
+            var radioValue = radio ? radio.value : "Aucun bouton sélectionné"; // Get the value of the selected radio button
+            var select = document.getElementById('select').value;
+            var comm = document.getElementById('commentaire').value;
+
+            var content = "Texte : " + texte + "\nPassword : " + password + "\n" + checked + "\nBouton choisi : " + radioValue + "\nValeur choisie : " + select + "\nCommentaire : " + comm;
+            alert(content);
+        }
+    </script>
+</body>
+</html>

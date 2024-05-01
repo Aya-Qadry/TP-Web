@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <table style="background-color: antiquewhite; border: 1px solid black ;">
+            <tr>
+                <td><label for="premier">Entrer ici le premier nombre :</label></td>
+                <td><input type="number" name="premier" id="premierInput"></td>
+            </tr>
+            <tr>
+                <td><label for="deuxieme">Entrer ici le deuxième nombre :</label></td>
+                <td><input type="number" name="deuxieme" id="deuxiemeInput"></td>
+            </tr>
+            <tr>
+                <td><label for="troisieme">Entrer ici le troisième nombre :</label></td>
+                <td><input type="number" name="troisieme" id="troisiemeInput"></td>
+            </tr>
+            <tr>
+                <td><label for="moyenne">La moyenne des trois nombres :</label></td>
+                <td><input type="number" name="moyenne" id="moyenneInput" readonly></td>
+            </tr>
+            <tr>
+                <td></td>  
+                <td>
+                    <button type="button" onclick="calculerMoyenne()">Calculer</button>
+                    <button type="reset">Effacer</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function calculerMoyenne(){
+            var premierInput = parseFloat(document.getElementById('premierInput').value);
+            var deuxiemeInput = parseFloat(document.getElementById('deuxiemeInput').value);
+            var troisiemeInput = parseFloat(document.getElementById('troisiemeInput').value);
+            var moyenne = 0 ; 
+            var somme = premierInput + deuxiemeInput + troisiemeInput ; 
+            moyenne = somme/3;
+            console.log(moyenne);
+            var moyenneInput = document.getElementById('moyenneInput') ; 
+            moyenneInput.value = moyenne ; 
+        }
+    </script>
+</body>
+</html>

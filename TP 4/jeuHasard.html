@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu Hasard</title>
+</head>
+
+<body>
+    <script>
+        function jeu() {
+            var res = Math.round(Math.random() * 1000) + 1;
+            var essai = 0;
+            var nb_tentatives = 0;
+
+            while (essai < 20) {
+                var valeur = prompt("Entrez une valeur entre 1 et 1000 :");
+                valeur = parseInt(valeur);
+
+                if (valeur === res) {
+                    alert("Bravo !! Vous avez trouvé en " + (essai + 1) + " essais !");
+                    nb_tentatives = essai + 1;
+                    break;
+                } else if (valeur < res) {
+                    alert("Trop petit ! Il vous reste " + (19 - essai) + " essais");
+                } else {
+                    alert("Trop grand ! Il vous reste " + (19 - essai) + " essais");
+                }
+                essai++;
+            }
+
+            if (essai === 20) {
+                alert("Perdu ! Le nombre à découvrir était " + res);
+            }
+
+            var reponse = confirm("Nouvelle partie ? ");
+            return reponse ; 
+        }
+        var reponse = jeu() ; 
+        if (reponse) {
+                jeu() ; 
+        }else{
+            alert("Merci davoir joue")
+        }  
+    
+    </script>
+
+</body>
+
+</html>

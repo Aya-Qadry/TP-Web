@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 11</title>
+</head>
+<body id="body">
+    <h3>Exercice 11 : changement de couleur ( menu déroulant ) </h3><br>
+    <select name="" id="select">
+        <option value="grey" id="opt">Gris</option>
+        <option value="red" id="opt">Rouge</option>
+        <option value="white" id="opt">Blanc</option>
+        <option value="pink" id="opt">Rose</option>
+    </select>
+    <button type="submit" onclick="submit()"> GO </button>
+    <script>
+        function submit(){
+            var option = document.getElementById('select').value ; 
+            var body = document.getElementById('body') ; 
+            
+            body.style.backgroundColor = option ; 
+        }
+    </script>
+</body>
+</html>

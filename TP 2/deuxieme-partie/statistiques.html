@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="setup.css">
+</head>
+<style>
+    table , th ,td{
+        border: 1px black solid ;
+        border-collapse: collapse;
+    }
+    table{
+        width: 750px;
+        margin-left: 85px;
+        height: 400px;
+    }
+    td , th{
+        padding: 10px;
+    }
+    thead{
+        background-color: rgb(229, 206, 176);
+        color: darkblue;
+    }
+    #cap{
+        text-align: center;
+        font-weight: bold;
+        padding: 10px;
+        color: darkblue;
+        font-size: larger;
+    }
+    #result{
+        color: purple;
+        text-align: center;
+    }
+
+</style>
+<body>
+    <div id="header">
+        <h1>Statistiques de la ville d'Errachidia</h1>
+    </div>
+    
+    
+    <div id="menu">
+        <div id="titre">
+            <h2>Menu</h2>
+        </div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="histoire.html">Histoire</a></li>
+            <li><a href="general.html">General</a></li>
+            <li><a href="plan.html">Plan</a></li>
+            <li><a href="statistiques.html">Statistiques</a></li>
+            <li><a href="contacts.html">Contact</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+        </ul>
+    </div>
+
+    <div id="content">
+        <table>
+            <caption id="cap">Evolution de la population de la province par milieu de residence</caption>
+        
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th colspan="3">1994</th>
+                        <th colspan="3">2004</th>
+                    </tr>
+                    <tr>
+                        <th>Milieu</th>
+                        <th>Urbain</th>
+                        <th>Rural</th>
+                        <th>Total</th> 
+                        <th>Urbain</th>
+                        <th>Rural</th>
+                        <th>Total</th> 
+                    </tr>
+                </thead>
+                <tbody>
+        
+                <tr>
+                    <th>Errachidia</th>
+                    <td>139 773</td>
+                    <td>236 664</td>
+                    <td>376 424</td>
+                    <td>168 222</td>
+                    <td>236 589</td>
+                    <td>236 154</td>
+                </tr>
+                <tr>
+                    <th>Region</th>
+                    <td>139 773</td>
+                    <td>236 664</td>
+                    <td>376 424</td>
+                    <td>168 222</td>
+                    <td>236 589</td>
+                    <td>236 154</td>
+                </tr>
+                <tr>
+                    <th>National</th>
+                    <td>139 773</td>
+                    <td>236 664</td>
+                    <td>376 424</td>
+                    <td>168 222</td>
+                    <td>236 589</td>
+                    <td>236 154</td>
+                </tr>
+                <tr>
+                    <th>Province</th>
+                    <td id="result">14.5</td>
+                    <td id="result">26.7</td>
+                    <td id="result">20.3</td>
+                    <td id="result">14</td>
+                    <td id="result">25</td>
+                    <td id="result">19</td>
+                </tr>
+            </tbody>
+        
+            </table>
+    </div>
+   
+    
+</body>
+</html>

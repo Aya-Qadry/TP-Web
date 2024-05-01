@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 9 </title>
+    <style>
+        div{
+            margin: auto;
+            width: 50%;
+            margin-top: 40px;
+        }
+        img{
+            width: 250px;
+            height: 250px;
+        } 
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <img src="i1.jpg" alt="" id="i1" onmouseover="one()">
+                </td>
+                <td>
+                    <img src="i2.jpeg" alt="" id="i2" onmouseover="two()">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="i3.jpeg" alt="" id="i3" onclick="three()">
+                </td>
+                <td>
+                    <img src="i4.jpeg" alt="" id="i4">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function one(){
+            var i2 = document.getElementById('i2') ; 
+            i2.setAttribute('src','i4.jpeg') ;
+        }
+        function two(){
+            var i1 = document.getElementById('i1') ; 
+            i1.setAttribute('src','i3.jpeg') ;
+        }
+        function three(){
+            var i1 = document.getElementById('i1') ; 
+            i1.setAttribute('src','i3.jpeg');
+            var i2 = document.getElementById('i2') ; 
+            i2.setAttribute('src','i1.jpg'); 
+            var i3 = document.getElementById('i3') ; 
+            i3.setAttribute('src','i4.jpeg'); 
+            var i4 = document.getElementById('i4') ; 
+            i4.setAttribute('src','i2.jpeg');
+
+        }
+    </script>
+</body>
+</html>

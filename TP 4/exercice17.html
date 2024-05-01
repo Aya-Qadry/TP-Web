@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 17</title>
+</head>
+<body>
+    <h1>QCM</h1>
+    
+    <form >
+        <h2>Question 1 :</h2>
+        <p>Quelle est la capitale de la France ?</p>
+        <label>
+            <input type="radio" name="q1" value="paris"> Paris
+        </label><br>
+        <label>
+            <input type="radio" name="q1" value="londres"> Londres
+        </label><br>
+        <label>
+            <input type="radio" name="q1" value="berlin"> Berlin
+        </label><br>
+        <label>
+            <input type="radio" name="q1" value="rome"> Rome
+        </label><br><br>
+
+        <h2>Question 2 :</h2>
+        <p>Quelle est la capitale des États-Unis ?</p>
+        <label>
+            <input type="radio" name="q2" value="washington"> Washington D.C.
+        </label><br>
+        <label>
+            <input type="radio" name="q2" value="new_york"> New York
+        </label><br>
+        <label>
+            <input type="radio" name="q2" value="los_angeles"> Los Angeles
+        </label><br>
+        <label>
+            <input type="radio" name="q2" value="londres"> Londres
+        </label><br><br>
+
+        <button type="button" onclick="submitform()">Repondre</button>
+        
+    </form>
+
+    <hr>
+    <h2>Résultat du Quiz :</h2>
+    <label for="resultat">Nombre de réponses correctes :</label>
+    <input type="text" id="resultat" readonly>
+
+    <script>
+
+        function submitform() {
+            var score = 0;
+
+            var q1Reponse = document.querySelector('input[name="q1"]:checked');
+            if (q1Reponse && q1Reponse.value == "paris") {
+                score++;
+            }
+
+            var q2Reponse = document.querySelector('input[name="q2"]:checked');
+            if (q2Reponse && q2Reponse.value == "washington") {
+                score++;
+            }
+            document.getElementById('resultat').value = score;
+        }
+    </script>
+</body>
+</body>
+</html>
